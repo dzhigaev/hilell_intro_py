@@ -1,2 +1,2 @@
-for i in range(40):
+for i in range(5):
     print(i, " changes to file")
