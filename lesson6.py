@@ -1,55 +1,55 @@
-my_string = "This is {person:} favourite\tstring"
+my_string = 'This is {person:} favourite\tstring'
 my_string.capitalize()
 my_string.casefold()
 my_string.center(len(my_string))
-my_string.count("t")
+my_string.count('t')
 my_string.encode()
-my_string.endswith("g")
+my_string.endswith('g')
 my_string.expandtabs(5)
-my_string.find("is")
-my_string.format(person="my")
-my_string.format_map({"person": "my"})
-my_string.index("s")
-my_string1 = "5"
+my_string.find('is')
+my_string.format(person='my')
+my_string.format_map({'person': 'my'})
+my_string.index('s')
+my_string1 = '5'
 my_string1.isalnum()
 my_string1.isalpha()
 my_string1.isascii()
-my_string2 = "5.0"
+my_string2 = '5.0'
 my_string1.isdecimal()
 my_string1.isdigit()
 my_string1.isidentifier()
 my_string.islower()
 my_string1.isnumeric()
 my_string2.isprintable()
-my_string3 = " "
+my_string3 = ' '
 my_string3.isspace()
 my_string.istitle()
-my_string4 = "MY FAVOURITE STRING"
+my_string4 = 'MY FAVOURITE STRING'
 my_string4.isupper()
-my_string5 = "@"
-my_string5.join(["email", "gmail.com"])
+my_string5 = '@'
+my_string5.join(['email', 'gmail.com'])
 print(my_string5.ljust(20), 'of all')
 my_string4.lower()
-my_string6 = " This is my favourite string      "
+my_string6 = ' This is my favourite string      '
 my_string6.lstrip()
-s = my_string6.maketrans("This", "Thes")
+s = my_string6.maketrans('This', 'Thes')
 my_string6.translate(s)
-my_string6.partition("i")
-my_string6.replace("This", "That")
-my_string6.rfind("is")
-my_string6.rindex("string")
+my_string6.partition('i')
+my_string6.replace('This', 'That')
+my_string6.rfind('is')
+my_string6.rindex('string')
 my_string5.rjust(20)
-my_string6.rpartition("my")
-my_string6.rsplit("s")
+my_string6.rpartition('my')
+my_string6.rsplit('s')
 my_string6.rstrip()
-my_string6.split(" ")
-my_string7 = "My favourite string ends here\nhere is my new string"
+my_string6.split(' ')
+my_string7 = 'My favourite string ends here\nhere is my new string'
 my_string7.splitlines()
-my_string7.startswith("His")
+my_string7.startswith('His')
 my_string6.strip()
 my_string7.swapcase()
 my_string7.title()
 new_dict = {105: 20}
 my_string7.translate(new_dict)
 my_string7.upper()
-"helo".zfill(10)
+'helo'.zfill(10)
