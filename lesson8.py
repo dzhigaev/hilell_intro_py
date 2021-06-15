@@ -31,7 +31,7 @@ my_list2 = [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 3
 addition = 0
 multiplication = 1
 for element in my_list2:
-    addition = addition + element
+    addition += element
     multiplication *= element
 print(addition)
 print(multiplication)
