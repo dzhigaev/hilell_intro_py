@@ -1,7 +1,9 @@
 from random import randint
 
-# Создайте словарь с количеством элементов не менее 5-ти. Поменяйте местами первый и последний элемент объекта.
-# Удалите второй элемент. Добавьте в конец ключ «new_key» со значением «new_value». Выведите на печать итоговый
+# Создайте словарь с количеством элементов не менее 5-ти.
+# Поменяйте местами первый и последний элемент объекта.
+# Удалите второй элемент. Добавьте в конец ключ «new_key» со значением «new_value».
+# Выведите на печать итоговый
 # словарь. Важно, чтобы словарь остался тем же (имел тот же адрес в памяти).
 my_dict = {'element1': '1', 'element2': '2', 'element3': '3', 'element4': '4', 'element5': '5'}
 print(id(my_dict))
@@ -9,12 +11,8 @@ first = list(my_dict.items())[0]
 last = list(my_dict.items())[-1]
 second = list(my_dict.items())[1]
 print(second)
-for k, v in my_dict.items():
-    if k == first[0]:
-        my_dict[k] = last[1]
-    if k == last[0]:
-        my_dict[k] = first[1]
-
+my_dict[first[0]] = last[1]
+my_dict[last[0]] = first[1]
 my_dict.pop(second[0])
 my_dict['new_key'] = 'new_value'
 print(my_dict)
@@ -65,7 +63,7 @@ list_4 = [' ']
 message = 'My name is Dmitriy'
 encoded_result = []
 decoded_list = []
-decoded_str = ''
+
 for i in list_:
     list_4.append(i)
     list_4.append(i.lower())
@@ -83,7 +81,7 @@ for encoded_letter in encoded_result:
         if encoded_letter == value:
             decoded_list.append(key)
 
-joining = decoded_str.join(map(str, decoded_list))
+joining = ''.join(decoded_list)
 print(encoded_result)
 print(joining)
 
