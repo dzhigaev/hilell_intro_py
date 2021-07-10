@@ -3,16 +3,7 @@ import json
 
 def type_counter(your_dict):
     """
-    This function check which keys has what value in dictionary
-
-    :param your_dict: Must be dictionary
-    :return: dictionary in next format {
-                                    'int': [values],
-                                    'string': [values],
-                                    'float': [values],
-                                    'none_type': [values],
-                                    'bool': [values]
-                                    }
+    This function checks which key has what value in given dictionary.
     """
     result_dict = {
         'int': [],
@@ -37,20 +28,17 @@ def type_counter(your_dict):
 
 def updating_hw_result():
     """
-    This function takes JSON object from HW.json, changes it and rewrites to HW_result.json
+    This function takes JSON object from HW.json, changes it and rewrites to HW_result.json.
     """
     with open('HW.json', 'r') as given_json:
-        incoming_json = given_json.readlines()
-    edited_json_list = [_.replace('\n', '') for _ in incoming_json]
-    json_string = ''.join(str(_) for _ in edited_json_list)
-    dict_from_json = json.loads(json_string)
+        incoming_json = json.loads(given_json.read())
     result_for_dumping = {'employee': {}}
-    for id_ in dict_from_json['employee']:
+    for id_ in incoming_json['employee']:
         name = f'''{id_['firstName']} {id_['lastName']}'''
         result_for_dumping['employee'].update({name: type_counter(id_)})
     back_to_json = json.dumps(result_for_dumping)
     with open('HW_result.json', 'w') as new_json:
-        new_json.writelines(back_to_json)
+        new_json.write(back_to_json+'\n')
 
 
 if __name__ == "__main__":
